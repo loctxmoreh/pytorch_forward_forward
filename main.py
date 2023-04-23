@@ -67,9 +67,8 @@ class Net(torch.nn.Module):
 
 
 class Layer(nn.Linear):
-    def __init__(self, in_features, out_features,
-                 bias=True, device=None, dtype=None):
-        super().__init__(in_features, out_features, bias, device, dtype)
+    def __init__(self, in_features, out_features, bias=True):
+        super().__init__(in_features, out_features, bias)
         self.relu = torch.nn.ReLU()
         self.opt = Adam(self.parameters(), lr=0.03)
         self.threshold = 2.0
