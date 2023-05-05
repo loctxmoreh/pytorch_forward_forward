@@ -1,0 +1,11 @@
+name: fwfw
+dependencies:
+    - python=3.8
+    - numpy
+    - matplotlib
+    - tqdm
+    - pip
+    - pip:
+      - moreh-driver==23.4.3
+      - torch==1.7.1+cu110.moreh23.4.3
+      - torchvision
